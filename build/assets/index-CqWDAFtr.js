@@ -1,0 +1,2 @@
+import{j as e}from"./index-DM_BUGPg.js";import"./antd-mobile-1Ouqkx4I.js";import"./react-OCszTgXq.js";const s=()=>e.jsxs("div",{className:"flex flex-col items-center justify-center",children:[e.jsx("h1",{className:"text-[24px] text-center w-full bg-green-200",children:"详情"}),e.jsx("div",{className:"h-[400px] w-full bg-red-200"}),e.jsx("div",{className:"h-[600px] w-full bg-blue-200"}),e.jsx("div",{className:"h-[400px] w-full bg-orange-200"})]});export{s as default};
+//# sourceMappingURL=index-CqWDAFtr.js.map

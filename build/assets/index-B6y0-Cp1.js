@@ -1,0 +1,2 @@
+import{u as e,j as s}from"./index-DM_BUGPg.js";import{a}from"./antd-mobile-1Ouqkx4I.js";import"./react-OCszTgXq.js";const r=a.memo((()=>{const a=e();return s.jsxs("div",{className:"flex flex-col items-center justify-center fullPage",children:[s.jsx("p",{className:"text-xs",children:"Sorry,您访问的页面丢了~"}),s.jsx("div",{className:"back_btn",onClick:()=>{a("/",{replace:!0})},children:"返回首页"})]})}));export{r as default};
+//# sourceMappingURL=index-B6y0-Cp1.js.map

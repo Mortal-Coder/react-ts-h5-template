@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/react.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="description" content="react ts template" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <title>React</title>
+    <!-- 阿里图标库 -->
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_4842848_v2xznypx03h.css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  </body>
+  <!-- 移动端取消点击延迟 -->
+  <script>
+    FastClick.prototype.focus = function (targetElement) {
+      let length;
+      if (
+        targetElement.setSelectionRange &&
+        targetElement.type.indexOf('date') !== 0 &&
+        targetElement.type !== 'time' &&
+        targetElement.type !== 'month'
+      ) {
+        length = targetElement.value.length;
+        targetElement.focus();
+        targetElement.setSelectionRange(length, length);
+      } else {
+        targetElement.focus();
+      }
+    };
+  </script>
+</html>

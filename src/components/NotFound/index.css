@@ -1,0 +1,12 @@
+.back_btn {
+  background-color: #103056;
+  line-height: 50px;
+  width: 150px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  position: fixed;
+  bottom: 50px;
+  font-weight: bold;
+  border-radius: 25px;
+}

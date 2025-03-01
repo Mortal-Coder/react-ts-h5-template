@@ -1,0 +1,45 @@
+@import 'tailwind.css';
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+html,
+body {
+  -webkit-overflow-scroll: touch;
+  line-height: normal;
+  background-color: #f7f7f7;
+}
+.fullPage {
+  height: calc(var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))));
+  width: 100vw;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.fullBody {
+  height: 100%;
+  width: 100%;
+}
+.page_loading_body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: calc(var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))));
+  width: 100vw;
+  background: #f7f7f7;
+  z-index: 1;
+}
+/* 自定义 NProgress 进度条颜色 */
+#nprogress .bar {
+  background: #1677ff !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #1677ff, 0 0 5px #1677ff !important;
+}

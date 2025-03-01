@@ -1,0 +1,54 @@
+@import './variables.less'; 
+@import './tailwind.css';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow: hidden; // 在ios上会导致无法触发隐藏地址栏
+}
+
+html,
+body {
+  -webkit-overflow-scroll: touch;
+  line-height: normal;
+  background-color: @background-color;
+}
+
+.fullPage {
+  height: calc(@height-primary);
+  width: 100vw;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; // ios触发隐藏地址栏需要滚动元素为body
+}
+
+.fullBody {
+  height: 100%;
+  width: 100%;
+}
+
+.page_loading_body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: calc(@height-primary);
+  width: 100vw;
+  background: @background-color;
+  z-index: 1;
+}
+
+
+/* 自定义 NProgress 进度条颜色 */
+#nprogress .bar {
+  background: @color-primary !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px @color-primary, 0 0 5px @color-primary !important;
+}
