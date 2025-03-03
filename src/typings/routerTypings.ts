@@ -1,5 +1,5 @@
 export interface TabBarItem {
-  title: string;
+  title: () => string;
   path: string;
   icon: string;
 }

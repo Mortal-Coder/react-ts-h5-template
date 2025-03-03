@@ -9,14 +9,14 @@ export namespace White {
   export type SwitchType = 'right' | 'bottom' | 'scroll' | 'fade';
   type TabBarType = {
     icon: string;
-    title: string;
+    title: () => string;
   };
   export interface RouteConfig extends RouteProps {
     routes?: RouteConfig[]; // 子列表
     tabBars?: (RouteConfig & TabBarType)[];
     isTabIndex?: boolean;
     sceneMode?: SwitchType;
-    title?: string;
+    title?: () => string;
     path: string;
     component:
       | ComponentClass<Record<string, unknown>>

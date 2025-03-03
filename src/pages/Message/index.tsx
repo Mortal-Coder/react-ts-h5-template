@@ -4,12 +4,7 @@ import MessageList from './components/MessageList';
 import './index.less';
 import api from '@/api';
 import { useLoadList } from '@/utils/loadListData';
-
-const tabItems = [
-  { key: 'message', title: '消息' },
-  { key: 'system', title: '系统' },
-  { key: 'notification', title: '通知' },
-];
+import { useTranslation } from 'react-i18next';
 
 const Message: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -18,6 +13,13 @@ const Message: FC = () => {
     api.messageApi.getMessageListPaginated,
   );
 
+  const { t } = useTranslation();
+
+  const tabItems = [
+    { key: 'message', title: t('message.message') },
+    { key: 'system', title: t('message.system') },
+    { key: 'notification', title: t('message.notification') },
+  ];
   // 刷新
   const handleRefresh = async (type: string) => {
     await loadData(true, {

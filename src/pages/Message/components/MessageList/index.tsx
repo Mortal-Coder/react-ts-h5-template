@@ -11,6 +11,7 @@ import {
 } from 'antd-mobile';
 import { IMessage } from '@/api/modules/message/type';
 import './index.less';
+import { useTranslation } from 'react-i18next';
 interface MessageListProps {
   type: string;
   messages: IMessage[];
@@ -30,6 +31,7 @@ const MessageList: FC<MessageListProps> = ({
   onRefresh,
   onLoadMore,
 }) => {
+  const { t } = useTranslation();
   const getMessageTypeStyle = (type: string) => {
     switch (type) {
       case 'system':
@@ -48,8 +50,8 @@ const MessageList: FC<MessageListProps> = ({
       return (
         <ErrorBlock
           status="disconnected"
-          title="加载失败"
-          description="请检查网络连接后重试"
+          title={t('common.loadFailed')}
+          description={t('common.loadFailedDescription')}
         />
       );
     }
@@ -115,14 +117,16 @@ const MessageList: FC<MessageListProps> = ({
       return (
         <div className="flex justify-center items-center py-4">
           <DotLoading color="primary" />
-          <span className="ml-2">加载更多...</span>
+          <span className="ml-2">{t('common.loadMore')}</span>
         </div>
       );
     }
 
     if (!hasMore && messages.length > 0) {
       return (
-        <div className="text-center text-gray-400 text-sm">没有更多消息了</div>
+        <div className="text-center text-gray-400 text-sm">
+          {t('common.noMore')}
+        </div>
       );
     }
 

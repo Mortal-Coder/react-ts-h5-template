@@ -62,9 +62,12 @@ const RouteRender = () => {
   }, [currentLocation]);
 
   // 设置页面标题
-  useTitle(
-    routeList.find((v) => v.path === location.pathname)?.title as string,
-  );
+  let titleText = '';
+  const currentRoute = routeList.find((v) => v.path === location.pathname);
+  if (currentRoute && typeof currentRoute.title === 'function') {
+    titleText = currentRoute.title();
+  }
+  useTitle(titleText);
 
   return (
     <AnimatedSwitch

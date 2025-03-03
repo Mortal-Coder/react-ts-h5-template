@@ -1,0 +1,22 @@
+{
+  // 资源文件路径
+  "i18n-ally.localesPaths": ["public/locales"],
+
+  // 默认展示语言
+  "i18n-ally.displayLanguage": "zh",
+
+  // 源语言
+  "i18n-ally.sourceLanguage": "zh",
+
+  // 资源文件的文件名作为第一个key
+  "i18n-ally.namespace": false,
+
+  // 资源的key
+  "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
+
+  // flat({"a.b.c": "..."}) or nested({"a": {"b": {"c": "..."}}})
+  "i18n-ally.keystyle": "nested",
+
+  // 支持的框架
+  "i18n-ally.enabledFrameworks": ["react"]
+}

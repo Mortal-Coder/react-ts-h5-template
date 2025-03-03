@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Home"
+  },
+  "detail": {
+    "title": "Detail"
+  },
+  "message": {
+    "title": "Message",
+    "message": "Message",
+    "system": "System",
+    "notification": "Notification"
+  },
+  "about": {
+    "title": "About"
+  },
+  "common": {
+    "notFound": "Sorry, the page you are looking for is lost~",
+    "backHome": "Back to Home",
+    "loadFailed": "Load Failed",
+    "loadFailedDescription": "Please check your network connection and try again.",
+    "loadMore": "Load More...",
+    "noMore": "No more messages",
+    "decrement": "Decrement",
+    "reset": "Reset",
+    "increment": "add"
+  }
+}

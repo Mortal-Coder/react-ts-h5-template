@@ -1,5 +1,7 @@
 import { White } from '@/typings';
+import { t } from 'i18next';
 import { lazy } from 'react';
+
 const Message = lazy(
   () => import(/* chunkName: "Message" */ '@/pages/Message'),
 );
@@ -16,28 +18,28 @@ export const TabBarList: White.RouteTabBar[] = [
     component: Home,
     icon: 'icon-app-home-fill',
     sceneMode: 'scroll',
-    title: '首页',
+    title: () => t('home.title'),
   },
   {
     path: '/detail',
     component: Detail,
     icon: 'icon-app-layers-fill',
     sceneMode: 'scroll',
-    title: '详情',
+    title: () => t('detail.title'),
   },
   {
     path: '/message',
     component: Message,
     icon: 'icon-app-message-comments-fill',
     sceneMode: 'scroll',
-    title: '消息',
+    title: () => t('message.title'),
   },
   {
     path: '/about',
     component: About,
     icon: 'icon-app-atm-fill',
     sceneMode: 'scroll',
-    title: '我的',
+    title: () => t('about.title'),
   },
 ];
 

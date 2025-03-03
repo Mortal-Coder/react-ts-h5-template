@@ -1,10 +1,12 @@
 import { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation, matchPath, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import routers from '@/router/index';
 import styles from './index.module.less';
 import { TabBarItem, RouterItem } from '@/typings/routerTypings';
 
 const TabBarView: FC = () => {
+  const { ready } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const tabBars = useRef<TabBarItem[] | undefined>(
@@ -39,6 +41,10 @@ const TabBarView: FC = () => {
       matchPath(v.path, location.pathname),
     ) !== -1;
 
+  if (!ready) {
+    return null;
+  }
+
   return (
     <div
       className={`${styles.tabBar} flex justify-center items-center ${
@@ -50,12 +56,12 @@ const TabBarView: FC = () => {
             className={`flex flex-col justify-center items-center ${
               styles.tabBarItem
             } ${state === index ? styles.selected : ''}`}
-            key={title}
+            key={path}
             onClick={() => {
               OnTabClick(index, path);
             }}>
             <i className={`iconfont ${icon}`} />
-            <span>{title}</span>
+            <span>{typeof title === 'function' ? title() : title}</span>
           </div>
         ),
       )}
