@@ -21,6 +21,5 @@ export const getMessageListPaginated = async (params: {
     '/api/messages/paginated',
     params,
   );
-  console.log('getMessageListPaginated result:', result);
   return result;
 };
