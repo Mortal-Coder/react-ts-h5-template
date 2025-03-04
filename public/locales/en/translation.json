@@ -23,6 +23,7 @@
     "noMore": "No more messages",
     "decrement": "Decrement",
     "reset": "Reset",
-    "increment": "Increment"
+    "increment": "Increment",
+    "changeLanguage": "Switch Language"
   }
 }

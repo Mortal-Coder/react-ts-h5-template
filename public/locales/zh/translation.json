@@ -23,6 +23,7 @@
     "noMore": "没有更多消息了",
     "decrement": "减",
     "reset": "重置",
-    "increment": "加"
+    "increment": "加",
+    "changeLanguage": "切换语言"
   }
 }
