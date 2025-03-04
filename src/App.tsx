@@ -1,11 +1,11 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import TabBarView from '@/layout/tabbarView';
-import RouteRender from './router/RouteRender';
+import RouteRender from '@/router/RouteRender';
 import { useState, useEffect } from 'react';
 import { ConfigProvider } from 'antd-mobile';
 import zhCN from 'antd-mobile/es/locales/zh-CN';
-import { loadLocale } from './utils/admConfig';
-import { useLanguageStore } from './store';
+import { loadLocale } from '@/utils/admConfig';
+import { useLanguageStore } from '@/store';
 
 const App = () => {
   const [locale, setLocale] = useState(zhCN);
