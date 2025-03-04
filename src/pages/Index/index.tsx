@@ -1,10 +1,10 @@
 import { FC, memo } from 'react';
 import { Outlet } from 'react-router-dom';
-import './index.less';
+import styles from './index.module.less';
 
 const Index: FC = () => {
   return (
-    <div className="tabbar_page">
+    <div className={styles.tabbar_page}>
       <Outlet />
     </div>
   );

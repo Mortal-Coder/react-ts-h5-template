@@ -1,19 +1,25 @@
+/* 浅色主题 */
 :root {
   --background-color: #f7f7f7;
   --color-primary: #1677ff;
-  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --color-primary-light: #e6f4ff;
   --hint-color: #666;
+  --light-color: #999;
   --title-color: #333;
 }
-html[data-prefers-color-scheme="dark"] {
+/* 深色主题 */
+html[data-prefers-color-scheme='dark'] {
   --background-color: #141414;
   --color-primary: #4c9eff;
-  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --color-primary-light: #2c73e0;
   --hint-color: #999;
+  --light-color: #666;
   --title-color: #fff;
 }
 .tabbar_page {
-  height: calc(var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))) - 49px) !important;
+  height: calc(
+    var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))) - 49px
+  ) !important;
   width: 100vw !important;
   position: absolute;
   left: 0;
