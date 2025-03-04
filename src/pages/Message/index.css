@@ -1,3 +1,17 @@
+:root {
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --hint-color: #666;
+  --title-color: #333;
+}
+html[data-prefers-color-scheme="dark"] {
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --hint-color: #999;
+  --title-color: #fff;
+}
 .admList {
   --border-bottom: none;
   --border-top: none;
@@ -11,7 +25,7 @@
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: #fff;
+  background-color: var(--background-color);
   height: 44px;
 }
 .adm-tabs-header .adm-tabs-tab-list {

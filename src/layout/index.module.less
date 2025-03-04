@@ -7,7 +7,7 @@
 .tabBar {
   position: fixed;
   bottom: 0;
-  background: white;
+  background: var(--background-color);
   left: 0;
   width: 100vw;
   height: calc(49px + constant(safe-area-inset-bottom));
@@ -24,7 +24,7 @@
   font-size: 13px;
   height: 100%;
   flex: 1;
-  color: @hint-color;
+  color: var(--hint-color);
 
   i {
     font-size: 20px;
@@ -32,7 +32,7 @@
 }
 
 .selected {
-  color: @color-primary;
+  color: var(--color-primary);
 }
 
 .in_page {

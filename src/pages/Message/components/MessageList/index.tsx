@@ -86,7 +86,9 @@ const MessageList: FC<MessageListProps> = ({
             }
             title={
               <div className="flex items-center">
-                <span className="font-medium text-[#666]">{message.title}</span>
+                <span className="font-medium text-[var(--title-color)]">
+                  {message.title}
+                </span>
                 <span
                   className="ml-2 text-xs px-2 py-[2px] rounded-xs"
                   style={getMessageTypeStyle(message.type)}>
@@ -99,9 +101,9 @@ const MessageList: FC<MessageListProps> = ({
               </div>
             }
             description={
-              <div className="text-gray-500 text-xs mt-1">
+              <div className="text-[var(--hint-color)] text-xs mt-1">
                 <div className="line-clamp-2">{message.content}</div>
-                <div className="mt-1 text-xs text-gray-400">
+                <div className="mt-1 text-xs text-[var(--light-color)]">
                   {message.sender} · {message.createTime}
                 </div>
               </div>

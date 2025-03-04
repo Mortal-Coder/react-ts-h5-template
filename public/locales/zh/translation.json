@@ -24,6 +24,7 @@
     "decrement": "减",
     "reset": "重置",
     "increment": "加",
-    "changeLanguage": "切换语言"
+    "changeLanguage": "切换语言",
+    "switchDarkMode": "切换主题"
   }
 }

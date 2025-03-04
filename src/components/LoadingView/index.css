@@ -1,3 +1,19 @@
+:root {
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --hint-color: #666;
+  --light-color: #999;
+  --title-color: #333;
+}
+html[data-prefers-color-scheme="dark"] {
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --hint-color: #999;
+  --light-color: #666;
+  --title-color: #fff;
+}
 .la-square-jelly-box,
 .la-square-jelly-box > div {
   position: relative;
@@ -8,7 +24,7 @@
 .la-square-jelly-box {
   display: block;
   font-size: 0;
-  color: #1677ff;
+  color: var(--color-primary);
 }
 .la-square-jelly-box.la-dark {
   color: #333;

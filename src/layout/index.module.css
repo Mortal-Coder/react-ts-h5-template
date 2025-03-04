@@ -1,10 +1,24 @@
+:root {
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --hint-color: #666;
+  --title-color: #333;
+}
+html[data-prefers-color-scheme="dark"] {
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --hint-color: #999;
+  --title-color: #fff;
+}
 .am-tab-bar-bar .am-tab-bar-tab-image {
   object-fit: contain;
 }
 .tabBar {
   position: fixed;
   bottom: 0;
-  background: white;
+  background: var(--background-color);
   left: 0;
   width: 100vw;
   height: calc(49px + constant(safe-area-inset-bottom));
@@ -20,13 +34,13 @@
   font-size: 13px;
   height: 100%;
   flex: 1;
-  color: #666;
+  color: var(--hint-color);
 }
 .tabBarItem i {
   font-size: 20px;
 }
 .selected {
-  color: #1677ff;
+  color: var(--color-primary);
 }
 .in_page {
   transform: translate3d(0, 0, 0);

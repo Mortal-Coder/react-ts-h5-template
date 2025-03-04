@@ -1,41 +1,21 @@
-@background-color:#f7f7f7;
-@color-primary:#1677ff;
-@color-primary-light: fade(@color-primary, 10%);
-@hint-color:#666;
-@title-color:#333;
-@line-color:#eee;
 @height-primary: var(--height-primary, calc(100vh - var(--browser-address-bar, 0px)));
 
-
-// 浅色主题
-@light-background-color: #f7f7f7;
-@light-color-primary: #1677ff;
-@light-color-primary-light: fade(@light-color-primary, 10%);
-@light-hint-color: #666;
-@light-title-color: #333;
-
-
-// 深色主题
-@dark-background-color: #141414;
-@dark-color-primary: #4c9eff;
-@dark-color-primary-light: fade(@dark-color-primary, 10%);
-@dark-hint-color: #999;
-@dark-title-color: #fff;
-
-// 浅色主题
+/* 浅色主题 */
 :root {
-  --background-color: @light-background-color;
-  --color-primary: @light-color-primary;
-  --color-primary-light: @light-color-primary-light;
-  --hint-color: @light-hint-color;
-  --title-color: @light-title-color;  
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: #e6f4ff;
+  --hint-color: #666;
+  --light-color: #999;
+  --title-color: #333;
 }
 
-// 深色主题
+/* 深色主题 */
 html[data-prefers-color-scheme="dark"] {
-  --background-color: @dark-background-color;
-  --color-primary: @dark-color-primary;
-  --color-primary-light: @dark-color-primary-light;
-  --hint-color: @dark-hint-color;
-  --title-color: @dark-title-color;
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: #2c73e0;
+  --hint-color: #999;
+  --light-color: #666;
+  --title-color: #fff;
 }

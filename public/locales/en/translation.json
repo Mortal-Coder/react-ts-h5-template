@@ -24,6 +24,7 @@
     "decrement": "Decrement",
     "reset": "Reset",
     "increment": "Increment",
-    "changeLanguage": "Switch Language"
+    "changeLanguage": "Switch Language",
+    "switchDarkMode": "Switch Theme"
   }
 }

@@ -1,4 +1,18 @@
 @import 'tailwind.css';
+:root {
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --hint-color: #666;
+  --title-color: #333;
+}
+html[data-prefers-color-scheme="dark"] {
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --hint-color: #999;
+  --title-color: #fff;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +23,7 @@ html,
 body {
   -webkit-overflow-scroll: touch;
   line-height: normal;
-  background-color: #f7f7f7;
+  background-color: var(--background-color);
 }
 .fullPage {
   height: calc(var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))));
@@ -33,13 +47,13 @@ body {
   top: 0;
   height: calc(var(--height-primary, calc(100vh - var(--browser-address-bar, 0px))));
   width: 100vw;
-  background: #f7f7f7;
+  background: var(--background-color);
   z-index: 1;
 }
 /* 自定义 NProgress 进度条颜色 */
 #nprogress .bar {
-  background: #1677ff !important;
+  background: var(--color-primary) !important;
 }
 #nprogress .peg {
-  box-shadow: 0 0 10px #1677ff, 0 0 5px #1677ff !important;
+  box-shadow: 0 0 10px var(--color-primary), 0 0 5px var(--color-primary) !important;
 }

@@ -11,4 +11,5 @@ export enum LangEnum {
 // LocalStorage
 export enum LocalStorageKey {
   LANGUAGE = 'i18nextLng',
+  DARK_MODE = 'darkMode',
 }

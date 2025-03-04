@@ -13,7 +13,7 @@ html,
 body {
   -webkit-overflow-scroll: touch;
   line-height: normal;
-  background-color: @background-color;
+  background-color: var(--background-color);
 }
 
 .fullPage {
@@ -40,15 +40,15 @@ body {
   top: 0;
   height: calc(@height-primary);
   width: 100vw;
-  background: @background-color;
+  background: var(--background-color);
   z-index: 1;
 }
 
 
 /* 自定义 NProgress 进度条颜色 */
 #nprogress .bar {
-  background: @color-primary !important;
+  background: var(--color-primary) !important;
 }
 #nprogress .peg {
-  box-shadow: 0 0 10px @color-primary, 0 0 5px @color-primary !important;
+  box-shadow: 0 0 10px var(--color-primary), 0 0 5px var(--color-primary) !important;
 }

@@ -1,5 +1,21 @@
+:root {
+  --background-color: #f7f7f7;
+  --color-primary: #1677ff;
+  --color-primary-light: rgba(22, 119, 255, 0.1);
+  --hint-color: #666;
+  --light-color: #999;
+  --title-color: #333;
+}
+html[data-prefers-color-scheme="dark"] {
+  --background-color: #141414;
+  --color-primary: #4c9eff;
+  --color-primary-light: rgba(76, 158, 255, 0.1);
+  --hint-color: #999;
+  --light-color: #666;
+  --title-color: #fff;
+}
 .back_btn {
-  background-color: #103056;
+  background-color: var(--color-primary);
   line-height: 50px;
   width: 150px;
   text-align: center;
